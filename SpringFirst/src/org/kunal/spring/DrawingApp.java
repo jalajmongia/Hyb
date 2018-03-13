@@ -1,15 +1,14 @@
 package org.kunal.spring;
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.core.io.FileSystemResource;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-@SuppressWarnings("deprecation")
-public class DrawingApp {
+ public class DrawingApp {
 
 	public static void main(String[] args) {
-		BeanFactory beanFactory = new XmlBeanFactory(new FileSystemResource("spring.xml"));
-		Tringle tringle = (Tringle) beanFactory.getBean("tringle");
+		//BeanFactory beanFactory = new XmlBeanFactory(new FileSystemResource("spring.xml")); 
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		Tringle tringle = (Tringle) context.getBean("tringle");
 		tringle.draw();
 	}
 

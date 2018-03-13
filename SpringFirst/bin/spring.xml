@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="tringle" class="org.kunal.spring.Tringle">
+		<!-- <property name="type" value="RightAngle"></property> -->
+		<constructor-arg value="RightAngle"></constructor-arg>
+		<constructor-arg value="20"></constructor-arg> <!-- can also have type or index to decide -->
+	</bean>
+
+</beans>
